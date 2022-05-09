@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sigma Six</title>
+    <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dark_mode.css' %}">
+     <link rel="shortcut icon" href="{% static 'images/logo-mini.svg' %}"/>
+  </head>
+  <body>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center text-center error-page bg-primary">
+          <div class="row flex-grow">
+            <div class="col-lg-7 mx-auto text-white">
+              <div class="row align-items-center d-flex flex-row">
+                <div class="col-lg-6 text-lg-right pr-lg-4 ">
+                  <h1 class="display-1 mb-4">Ops</h1>
+                </div>
+                <div class="col-lg-6 error-page-divider text-lg-left pl-lg-4">
+                  <h2>SORRY!</h2>
+                  <h3 class="font-weight-light">You Enter Wrong Email or Password</h3>
+                    <a class="text-white font-weight-medium" href="{% url 'login' %}">Back to Login</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+    <script src="{% static 'js/off-canvas.js' %}"></script>
+    <script src="../../assets/js/hoverable-collapse.js"></script>
+    <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+    <script src="{% static 'js/misc.js' %}"></script>
+  </body>
+</html>

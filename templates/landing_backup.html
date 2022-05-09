@@ -1,0 +1,438 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sigma Six</title>
+    <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dark_mode.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo-mini.svg' %}"/>
+    <link async href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200
+        });
+    </script>
+    <style>
+
+        @media (max-width: 991px) {
+            .container_image {
+                display: block;
+                max-width: 100%;
+                max-height: 120%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container_image {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .image-border {
+            border-width: 3px 3px 3px 3px;
+            border-color: rgba(132, 137, 145, 1);
+            border-radius: 6px;
+        }
+
+        .image-wrapper {
+            padding: 140px 0 50px 0;
+            background: #151519
+        }
+
+        iframe {
+            overflow: hidden;
+        }
+
+        label[for="id_file"] {
+
+            font-size: 30px;
+        {#background-color: #128bfc;#} background: linear-gradient(to right, #5c97ee, #047edf 99%);
+            margin-top: 10px;
+            border-radius: 7px;
+            padding: 10px 20px;
+            font-family: "ubuntu-medium", sans-serif;
+            font-size: 15px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        #id_file {
+            display: none;
+        }
+
+        .fa i {
+            background: linear-gradient(to right, #77a0ec, #668dff 99%);
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript">
+    	(function(){var gtConstEvalStartTime = new Date();/*
+
+         Copyright The Closure Library Authors.
+         SPDX-License-Identifier: Apache-2.0
+        */
+        function d(b){var a=document.getElementsByTagName("head")[0];a||(a=document.body.parentNode.appendChild(document.createElement("head")));a.appendChild(b)}function _loadJs(b){var a=document.createElement("script");a.type="text/javascript";a.charset="UTF-8";a.src=b;d(a)}function _loadCss(b){var a=document.createElement("link");a.type="text/css";a.rel="stylesheet";a.charset="UTF-8";a.href=b;d(a)}function _isNS(b){b=b.split(".");for(var a=window,c=0;c<b.length;++c)if(!(a=a[b[c]]))return!1;return!0}
+        function _setupNS(b){b=b.split(".");for(var a=window,c=0;c<b.length;++c)a.hasOwnProperty?a.hasOwnProperty(b[c])?a=a[b[c]]:a=a[b[c]]={}:a=a[b[c]]||(a[b[c]]={});return a}window.addEventListener&&"undefined"==typeof document.readyState&&window.addEventListener("DOMContentLoaded",function(){document.readyState="complete"},!1);
+        if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google.translate._const');c._cest = gtConstEvalStartTime;gtConstEvalStartTime = undefined;c._cl='en';c._cuc='googleTranslateElementInit';c._cac='';c._cam='';c._ctkk='443432.3380506509';var h='translate.googleapis.com';var s=(true?'https':window.location.protocol=='https:'?'https':'http')+'://';var b=s+h;c._pah=h;c._pas=s;c._pbi=b+'/translate_static/img/te_bk.gif';c._pci=b+'/translate_static/img/te_ctrl3.gif';c._pli=b+'/translate_static/img/loading.gif';c._plla=h+'/translate_a/l';c._pmi=b+'/translate_static/img/mini_google.png';c._ps=b+'/translate_static/css/translateelement.css';c._puh='translate.google.com';_loadCss(c._ps);_loadJs(b+'/translate_static/js/element/main.js');})();})();
+    </script>
+<div class="container-scroller">
+    <div class="banner-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg ">
+                        <a class="navbar-brand" href=""><img src="{% static 'images/logo.svg' %}"
+                                                             alt=""></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="mdi mdi-menu"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'register' %}"><b>Sign Up</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'login' %}"><b>Login</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#aboutus"><b>About Us</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><b>Contact Us</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="collapse" href="#page-layouts"
+                                       aria-expanded="false" aria-controls="page-layouts">
+                                        <span class="menu-title"><b>Translate</b></span>
+                                        <i class="menu-arrow"></i>
+                                    </a>
+                                    <div class="collapse" id="page-layouts">
+                                        <ul class="nav flex-column sub-menu">
+                                            <li class="nav-item"><a class="nav-link"><div id="google_translate_element"></div></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="row py-0 py-sm-5">
+                <div class="col-lg-7 banner-content  animate__animated animate__fadeInLeft animate__fast "><br><br><br><br>
+                    <h1 class="mr-2 text-white ">Vehicle Monitoring and
+                        Parking System</h1>
+                    <div class="my-5" id="below-btn1">
+                        <a href="#below-btn2" class="btn btn-gradient-info btn-lg mr-2 mb-3 "
+                           style="border-radius: 5px">DEMO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-wrapper" id="below-btn2">
+    <br><br><br><br><br><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12" >
+                    <div class="text-center">
+                        <h3 id="hide-text" class="hide-text">Try It Out</h3>
+                    </div>
+                    <div class="text-center" >
+                        <h6 id="hide-text" class="hide-text"><span>Upload Image and We will Detect the license Plate Number</span>
+                        </h6>
+                        <form id="form" action="/result/" class="post-form" method="post"
+                              enctype="multipart/form-data" target="_blank">
+                            <br><br>
+                            <input type="checkbox" id="wholecar" class="form-check-input">Car &nbsp; &nbsp; &nbsp; &nbsp;
+                            <input type="checkbox" id="wholecar" class="form-check-input">Without Car
+                            <i class="input-helper"></i>
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                        </form>
+                    </div>
+                    {% if img %}
+                        <div class="image-border">
+
+                            <img src="{% static 'upload/results/sdad.jpg' %}" class="container_image" width="980"
+                                 height="720"
+                                 style="max-height: 100%;max-width: 100%">
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#save-submit').attr('src', e.target.result);
+
+                }
+                reader.readAsDataURL(input.files[0]); // convert to base64 string
+            }
+        }
+
+        document.getElementById("id_file").onchange = function () {
+            document.getElementById("form").submit();
+        };
+
+        document.getElementById("browse-button").onchange = function () {
+            document.getElementById("re-form").click();
+        }
+
+        function thisFileUpload() {
+            document.getElementById("file").click();
+        }
+
+        function submit() {
+            document.getElementsByTagName('form').submit();
+        }
+
+        $("form").submit(function (e) {
+            e.preventDefault();
+        });
+
+    </script>
+    <div class="details-wrapper">
+        <br><br><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card card-icon-top">
+                        <div class="card-body text-center">
+
+                            <h3><u>Vehicle Monitoring</u></h3>
+                            <p class="card-text"> Monitoring includes tracking of vehicles based on their number
+                                plate. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card card-icon-top">
+                        <div class="card-body text-center">
+
+                            <h3><u>Plate Recognition</u></h3>
+                            <p class="card-text">Applying OCR on vehicle plate for monitoring purpose <br><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card card-icon-top">
+                        <div class="card-body text-center">
+
+                            <h3><u>Vehicle Parking</u></h3>
+                                <p class="card-text">Work in Progress <br><br><br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br>
+            <div class="row pt-5 justify-content-center" id="aboutus">
+                <div class="col-md-12 pb-5 text-center">
+                    <h1>About Us</h1>
+                </div>
+            </div>
+            <bR><br>
+        </div>
+        <div class="team_area">
+            <div class="container justify-content-center align-items-center">
+                <div class="row">
+                    <div class="col-lg-4 col-md-3">
+                        <div class="single_team wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                            <div class="team_thumb text-center">
+                                <img src="{% static 'images/team/rushi.jpg' %}" alt="">
+                                <div class="team_hover">
+                                    <div class="hover_inner text-center">
+                                        <ul class="justify-content-center">
+                                            <li><a href="https://www.facebook.com/rushipatel1724"> <i
+                                                    class="fa fa-facebook"></i> </a></li>
+                                            <li><a href="https://www.linkedin.com/in/patel-rushi-8a0424171/"> <i
+                                                    class="fa fa-linkedin"></i> </a></li>
+                                            <li><a href="https://www.instagram.com/rushi___7/"> <i
+                                                    class="fa fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team_title text-center">
+                                <h3>Rushi Patel</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-3">
+                        <div class="single_team wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                            <div class="team_thumb text-center">
+                                <img src="{% static 'images/team/dhrumin.jpg' %}" alt="">
+                                <div class="team_hover">
+                                    <div class="hover_inner text-center">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/dhrumin.patel.752"> <i
+                                                    class="fa fa-facebook"></i> </a></li>
+                                            <li><a href="https://www.linkedin.com/in/dhrumin-patel-19168818b/"> <i
+                                                    class="fa fa-linkedin"></i> </a></li>
+                                            <li><a href="https://www.instagram.com/dhruminnp/"> <i
+                                                    class="fa fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team_title text-center">
+                                <h3>Dhrumin Patel</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-3">
+                        <div class="single_team wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                            <div class="team_thumb text-center">
+                                <img src="{% static 'images/team/Pratik.jpg' %}" alt="">
+                                <div class="team_hover">
+                                    <div class="hover_inner text-center">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/pratik.jain.14661261"> <i
+                                                    class="fa fa-facebook"></i> </a></li>
+                                            <li><a href="https://www.linkedin.com/in/pratik-jain-b0113818b/"> <i
+                                                    class="fa fa-linkedin"></i> </a></li>
+                                            <li><a href="https://www.instagram.com/pratik_6720/"> <i
+                                                    class="fa fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team_title text-center">
+                                <h3>Pratik Jain</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-3">
+                        <div class="single_team wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                            <div class="team_thumb text-center">
+                                <img src="{% static 'images/team/shubhang.jpg' %}" alt="">
+                                <div class="team_hover">
+                                    <div class="hover_inner text-center">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/shubhang.kalkar"> <i
+                                                    class="fa fa-facebook"></i> </a></li>
+                                            <li><a href="https://www.linkedin.com/in/shubhang-kalkar-b0a74b181/"> <i
+                                                    class="fa fa-linkedin"></i> </a></li>
+                                            <li><a href="https://www.instagram.com/shubhang_kalkar/"> <i
+                                                    class="fa fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team_title text-center">
+                                <h3>Shubhang Kalkar</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-3">
+                        <div class="single_team wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                            <div class="team_thumb text-center">
+                                <img src="{% static 'images/team/ayush.jpg' %}" alt="">
+                                <div class="team_hover">
+                                    <div class="hover_inner text-center">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/ayush.talati.7"> <i
+                                                    class="fa fa-facebook"></i> </a></li>
+                                            <li><a href="https://www.linkedin.com/in/ayush-talati-a58425171/"> <i
+                                                    class="fa fa-linkedin"></i> </a></li>
+                                            <li><a href="https://www.instagram.com/ayush_talati/"> <i
+                                                    class="fa fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team_title text-center">
+                                <h3>Ayush Talati</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-3">
+                        <div class="single_team wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                            <div class="team_thumb text-center">
+                                <img src="{% static 'images/team/janvi.jpg' %}" alt="">
+                                <div class="team_hover">
+                                    <div class="hover_inner text-center">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/profile.php?id=100015927307770"> <i
+                                                    class="fa fa-facebook"></i> </a></li>
+                                            <li><a href="https://www.linkedin.com/in/janavi-patel-1314a9176/"> <i
+                                                    class="fa fa-linkedin"></i> </a></li>
+                                            <li><a href="https://www.instagram.com/jaanvi_597/"> <i
+                                                    class="fa fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team_title text-center">
+                                <h3>Janavi Patel</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-2819eb07-bb4b-4970-b45f-b704c23d343d"></div>
+<footer class="footer">
+    <p class="text-center" style="text-align: justify">
+        Made by <a href="#">Sigma Six</a></p>
+    </p>
+</footer>
+</div>
+
+<script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+<script src="{% static 'js/off-canvas.js' %}"></script>
+<script src="{% static 'js/hoverable-collapse.js' %}"></script>
+<script src="{% static 'js/misc.js' %}"></script>
+<script src="{% static 'js/settings.js' %}"></script>
+<script src="{% static 'js/todolist.js' %}"></script>
+</body>
+</html>

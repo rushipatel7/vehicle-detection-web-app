@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+    <script>
+        let xmlhttp = new XMLHttpRequest();
+        function log(msg) {
+            console.log(msg);
+        }
+        function reqListener () {
+            log('our js register');
+        }
+
+        function updateProgress (oEvent) {
+            log('inside progress');
+            log(oEvent);
+            log(oEvent.currentTarget.responseText.length);
+            if (oEvent.lengthComputable) {
+                let percentComplete = (oEvent.loaded / oEvent.total) * 100;
+                document.getElementById('progress').innerText = percentComplete + ' %'
+              } else {
+                // Unable to compute progress information since the total size is unknown
+            }
+            let p = document.createElement('p');
+            let text = document.createTextNode('start new chunck: ' +  oEvent.target.responseText);
+            p.appendChild(text);
+            document.getElementById('data').appendChild(p);
+        }
+
+
+        xmlhttp.addEventListener('load', reqListener);
+        xmlhttp.addEventListener('progress', updateProgress, false);
+        xmlhttp.open("get", url, true);
+        xmlhttp.send();
+
+    </script>
+
+
+<body>
+</body>
+</html>

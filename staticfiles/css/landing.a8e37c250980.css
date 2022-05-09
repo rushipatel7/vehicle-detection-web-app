@@ -1,0 +1,16 @@
+.banner-wrapper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.69)),
+    url("../images/banner/car.71cc84a1f264.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+@media (max-width:375px){
+.banner-wrapper{
+        height: 100%;
+        width: 10%;
+    }
+}

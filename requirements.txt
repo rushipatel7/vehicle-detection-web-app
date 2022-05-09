@@ -1,0 +1,12 @@
+pandas==1.0.3
+pytictoc==1.5.0
+imutils==0.5.3
+numpy==1.16.6
+Django==2.2.12
+opencv-python-headless
+django_crispy_forms==1.9.2
+Pillow==7.2.0
+gunicorn
+django-heroku
+djangorestframework
+sklearn

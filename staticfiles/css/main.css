@@ -1,0 +1,77 @@
+/*#anchortag{*/
+/*    color:#e4eaff;*/
+/*}*/
+/*#anchortag:hover{*/
+/*    color:#30a415;*/
+/*}*/
+
+/*.text-left {*/
+/*  position: absolute;*/
+/*  bottom: 8px;*/
+/*  left: 16px;*/
+/*}*/
+
+.image{
+    /*position: relative;*/
+    /*box-sizing: border-box;*/
+    align-items: center;
+    /*display: flex;*/
+}
+
+
+.image-container{
+    /*background-image: url("../images/banner/car.jpg");*/
+    height: 100%;
+    width: 100%;
+    /*display: block;*/
+    margin: auto;
+    position: relative;
+    /*z-index: 900;*/
+}
+
+.slider_bg_1 {
+    /*background-image: url(../images/banner/car.jpg);*/
+    width: 100%;
+    height: 100%;
+    /*background: linear-gradient(to bottom, #222328, #1a191d)*/
+
+}
+.overlay{
+    z-index: 0;
+}
+.slider_area .single_slider {
+  position: relative;
+  z-index: 0;
+  height: 900px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#bg-img{
+    /*background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/banner/bg.svg");*/
+    background-image: url("../images/banner/bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin-left: -30px;
+    background-position: center center;
+    background-position-x: center;
+    background-position-y: center;
+
+    /*filter: brightness(70%);*/
+    /*z-index: 999;*/
+ }
+
+#bg-text{
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    transform: translate(-50%,-50%);
+}
+
+#bg-text h1{
+    color: white;
+    font-size: 70px;
+}

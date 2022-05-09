@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload Session</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link async href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/dark_mode.css' %}">
+     <link rel="shortcut icon" href="{% static 'images/logo-mini.svg' %}"/>
+    <style>
+        body{
+            background: #151519;
+            padding: 2.75rem 2.25rem
+        }
+        label[for="id_file"] {
+            font-size: 30px;
+            background-color: #128bfc;
+            border-radius: 2px;
+            padding: 10px 20px;
+            font-size: 15px;
+            font-family: "Helvetica Neue", sans-serif;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+        #id_file {
+        {#display: none;#}
+        }
+        .container_image {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .show-image{
+            font-size: 30px;
+            background-color: #128bfc;
+            border-radius: 2px;
+            padding: 10px 20px;
+            font-size: 15px;
+            font-family: "Helvetica Neue", sans-serif;
+            text-align: center;
+            color: white;
+            cursor:  pointer;
+        }
+        .item-transform {
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            transform: translate(-0%, -0%);
+        }
+                .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0px !important;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript">
+    	(function(){var gtConstEvalStartTime = new Date();/*
+
+         Copyright The Closure Library Authors.
+         SPDX-License-Identifier: Apache-2.0
+        */
+        function d(b){var a=document.getElementsByTagName("head")[0];a||(a=document.body.parentNode.appendChild(document.createElement("head")));a.appendChild(b)}function _loadJs(b){var a=document.createElement("script");a.type="text/javascript";a.charset="UTF-8";a.src=b;d(a)}function _loadCss(b){var a=document.createElement("link");a.type="text/css";a.rel="stylesheet";a.charset="UTF-8";a.href=b;d(a)}function _isNS(b){b=b.split(".");for(var a=window,c=0;c<b.length;++c)if(!(a=a[b[c]]))return!1;return!0}
+        function _setupNS(b){b=b.split(".");for(var a=window,c=0;c<b.length;++c)a.hasOwnProperty?a.hasOwnProperty(b[c])?a=a[b[c]]:a=a[b[c]]={}:a=a[b[c]]||(a[b[c]]={});return a}window.addEventListener&&"undefined"==typeof document.readyState&&window.addEventListener("DOMContentLoaded",function(){document.readyState="complete"},!1);
+        if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google.translate._const');c._cest = gtConstEvalStartTime;gtConstEvalStartTime = undefined;c._cl='en';c._cuc='googleTranslateElementInit';c._cac='';c._cam='';c._ctkk='443432.3380506509';var h='translate.googleapis.com';var s=(true?'https':window.location.protocol=='https:'?'https':'http')+'://';var b=s+h;c._pah=h;c._pas=s;c._pbi=b+'/translate_static/img/te_bk.gif';c._pci=b+'/translate_static/img/te_ctrl3.gif';c._pli=b+'/translate_static/img/loading.gif';c._plla=h+'/translate_a/l';c._pmi=b+'/translate_static/img/mini_google.png';c._ps=b+'/translate_static/css/translateelement.css';c._puh='translate.google.com';_loadCss(c._ps);_loadJs(b+'/translate_static/js/element/main.js');})();})();
+    </script>
+<div class="container-fluid">
+</div>
+    {% if img %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div>
+                        <img class="container_image" src="data:image/gif;base64,{{ result_image }}" height="80%"
+                             width="80%">
+                    </div>
+                </div>
+                <div class="col-sm-6 justify-content-center ">
+                    <div class="item-transform" style="margin: auto">
+                        <div>
+                            <p>
+                            <h1 style="font-family: 'Tw Cen MT';text-align: center;color: white">License Plate : {{ plate_number }}</h1></p>
+                        </div>
+                        <div class="text-center"><p>
+                            <button class="btn-gradient-info " style="padding: 10px 20px;" onclick="window.location.href='{% url 'landing' %}';window.close();">Try Back</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</body>
+</html>
